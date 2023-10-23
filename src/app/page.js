@@ -1,3 +1,4 @@
+'use client'
 import {
 	Navbar,
 	Billing,
@@ -11,21 +12,24 @@ import {
 	Hero,
 } from "@/components";
 import Image from "next/image";
+import { useState } from "react";
 
 export default function Home() {
+	const [lang, setLang] = useState("en");
+
 	return (
 		<main className="bg-primary w-full overflow-hidden text-white font-poppins">
 			{/* this is for navbar */}
 			<div className="paddingX flexCenter">
 				<div className="boxWidth">
-					<Navbar />
+					<Navbar lang={lang} setLang={setLang} />
 				</div>
 			</div>
 
 			{/* this is for hero section */}
 			<div className="flexStart">
 				<div className="boxWidth">
-					<Hero />
+					<Hero lang={lang} />
 				</div>
 			</div>
 

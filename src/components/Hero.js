@@ -2,8 +2,9 @@ import React from "react";
 import { discount, robot, shadow01 } from "../assets";
 import Image from "next/image";
 import GetStarted from "./GetStarted";
+import { hero } from '@/languages/data'
 
-const Hero = () => {
+const Hero = ({lang}) => {
 	return (
 		<section id="home" className="flex md:flex-row flex-col paddingY ">
 			<div className="flex-1 flexStart flex-col xl:px-0 sm:px-16 px-6 relative">
@@ -29,7 +30,7 @@ const Hero = () => {
 					</div>
 				</div>
 				<h1 className=" ss:text-[68px] text-[52px] font-semibold ss:leading-[100px] leading-[75px] w-full">
-					Payment Method.
+					{hero.heading[lang]}
 				</h1>
 				<p className="paragraph max-w-[470px] mt-5 ">
 					Our team of experts uses a methodology to identify the credit cards
